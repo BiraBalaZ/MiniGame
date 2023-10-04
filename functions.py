@@ -1,5 +1,4 @@
 from time import sleep
-import random
 
 # Function to compare maximum value
 def maximum_comparator(current_value, upper_limit, change):
@@ -34,6 +33,6 @@ def action_consume(item, player):
     '''Docstring'''
     if player.alive:
         sleep(1)
-        player.consume_item(item, random.randint(0, 1))
+        player.consume_item(item)
         sleep(2.5)
         print_life(player)

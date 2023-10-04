@@ -64,7 +64,7 @@ player.consume_item(drink)
 print_life(player)
 
 # Checking if Player is dead
-assert player.life <= 0
+assert player.life == 0
 
 # Checking tests results
 print("Passed all tests! =D")
