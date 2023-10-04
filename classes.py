@@ -1,8 +1,4 @@
 from functions import maximum_comparator, minimum_comparator
-import random
-
-# List of items
-drink_types = ['Orange juice', 'Water bottle', 'Energy drink', 'Banana vitamin', 'Cup of coffee']
 
 class Player:
     '''Docstring'''
@@ -31,6 +27,8 @@ class Player:
         '''Docstring'''
         target.life = target.life-damage
 
+ # # # # # # # # # # # # # # # # # # # # #
+
 class Consumable:
     '''Docstring'''
     rotten = False
@@ -40,12 +38,58 @@ class Consumable:
 class Drink(Consumable):
     '''Docstring'''
     life_points = 15
-    msg = f'drinks a {drink_types[random.randint(0, 4)]}'
+    msg = None
 
 class Food(Consumable):
     '''Docstring'''
     life_points = 25
-    msg = 'eats something'
+    msg = None
+
+ # # # # # # # # # # # # # # # # # # # # #
+
+class Apple(Food):
+    '''Docstring'''
+    life_points = 50
+    msg = 'eats one beautiful apple'
+
+class Banana(Food):
+    '''Docstring'''
+    life_points = 35
+    msg = 'eats a banana'
+
+class Sandwitch(Food):
+    '''Docstring'''
+    life_points = 45
+    msg = 'eats a wonderful sandwitch'
+
+class Cookie(Food):
+    '''Docstring'''
+    life_points = 25
+    msg = 'eats a Cookie in format of a cat'
+
+# # # # # # # # # # # # # # # # # # # # #
+
+class Coffee(Drink):
+    '''Docstring'''
+    life_points = 25
+    msg = 'drinks a Cuo of Coffee'
+
+class EnergyDrink(Drink):
+    '''Docstring'''
+    life_points = 25
+    msg = 'drinks a MONSTER MANGO LOCO ENERGY DRINK'
+
+class Water(Drink):
+    '''Docstring'''
+    life_points = 30
+    msg = 'drinks a Water Bottle'
+
+class OrangeJuice(Drink):
+    '''Docstring'''
+    life_points = 25
+    msg = 'drinks a Cup of Orange Juice'
+
+# # # # # # # # # # # # # # # # # # # # #
 
 class Enemy:
     '''Docstring'''
